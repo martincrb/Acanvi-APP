@@ -1,0 +1,71 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.SearchActivityFragment"
+    tools:showIn="@layout/activity_search"
+    android:background="@color/background">
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="32dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="I Have"
+        android:elevation="4dp"
+        android:background="@drawable/message_roundedbg"
+        android:textColor="@color/colorPrimary"
+        android:id="@+id/tengo_title"
+        android:layout_gravity="center_horizontal" />
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+        android:id="@+id/tengo_list" />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="whatever"
+
+        android:id="@+id/tengo_cualquiera"
+        android:layout_gravity="center_horizontal"
+        android:checked="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="I Want"
+        android:elevation="4dp"
+        android:textColor="@color/colorPrimary"
+        android:background="@drawable/message_roundedbg"
+        android:id="@+id/quiero_title"
+        android:layout_gravity="center_horizontal" />
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+        android:id="@+id/quiero_list" />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="whatever"
+        android:id="@+id/quiero_cualquiera"
+        android:layout_gravity="center_horizontal"
+        android:checked="false" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search ads"
+        android:textColor="@color/money"
+        android:background="@android:color/transparent"
+        android:id="@+id/buscar_cambio_button"
+        android:layout_gravity="center_horizontal" />
+</LinearLayout>

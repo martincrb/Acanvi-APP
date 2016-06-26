@@ -1,0 +1,127 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4dd0e1"
+    tools:context=".fragment.LoginActivityFragment">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/login_imageView"
+        android:layout_gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="270dp"
+        android:elevation="4dp"
+        android:src="@drawable/circle_yellow"/>
+    <!-- TODO: Update blank fragment layout -->
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/login_card_view"
+        android:layout_gravity="center"
+        android:layout_width="250dp"
+        android:layout_height="270dp"
+        android:elevation="2dp"
+        card_view:cardCornerRadius="6dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_centerVertical="true"
+            android:layout_alignBottom="@+id/card_view"
+            android:layout_centerHorizontal="true"
+            android:gravity="bottom"
+            android:padding="0dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/log_in"
+                android:textStyle="normal"
+                android:textColor="#239aea"
+                android:textSize="32dp"
+                android:id="@+id/login_textView"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+            <android.support.v4.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="18dp" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:ems="10"
+                android:textColorHint="#b0bec5"
+                android:id="@+id/login_editText"
+                android:background="@drawable/login_edittext_bg"
+                android:hint="@string/username" />
+            <android.support.v4.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="18dp" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:tint="#309feb"
+                android:textColorHint="#b0bec5"
+                android:id="@+id/login_editText2"
+                android:background="@drawable/login_edittext_bg"
+                android:hint="@string/password" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignBottom="@+id/login_card_view"
+                android:layout_gravity="center_horizontal">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_arrow_forward_black_24dp"
+                    android:background="@android:color/transparent"
+                    android:id="@+id/login_imageView3"
+
+                    android:layout_centerHorizontal="true" />
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/login_shimmer"
+                    android:visibility="invisible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="false"
+                    android:layout_centerHorizontal="true"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Logging in..."
+                        android:textColor="@color/colorAccent"
+                        android:id="@+id/login_loading_text"
+                         />
+                </com.facebook.shimmer.ShimmerFrameLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Not a member? Create an account!"
+        android:textColor="@android:color/white"
+        android:id="@+id/login_signintext"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>
+
